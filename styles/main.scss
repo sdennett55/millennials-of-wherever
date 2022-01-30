@@ -131,6 +131,16 @@ body {
     margin: 1em 0;
     max-width: 500px;
   }
+  &-entrySubtitle {
+    align-self: start;
+    width: 570px;
+    margin: 2em auto 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    max-width: 100%;
+  }
   &-entryCopy {
     line-height: 1.4;
     letter-spacing: normal;
