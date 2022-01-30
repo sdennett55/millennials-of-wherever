@@ -35,15 +35,6 @@ body {
   &-wherever {
     position: relative;
     display: block;
-
-    &::before {
-      content: "";
-      border-bottom: 1px solid black;
-      width: 100vw;
-      height: 1px;
-      position: absolute;
-      top: 100%;
-    }
   }
 
   &-main {

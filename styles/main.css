@@ -43,15 +43,6 @@ body {
   display: block;
 }
 
-.Mow-wherever::before {
-  content: "";
-  border-bottom: 1px solid black;
-  width: 100vw;
-  height: 1px;
-  position: absolute;
-  top: 100%;
-}
-
 .Mow-main {
   display: -webkit-box;
   display: -ms-flexbox;
