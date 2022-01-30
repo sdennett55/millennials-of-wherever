@@ -3,11 +3,30 @@
   --red: #ff5656;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Helvetica", sans-serif;
   overflow-x: hidden;
   background: var(--bg-color);
+
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  color: var(--red);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 * {
@@ -100,6 +119,7 @@ body {
     &:hover,
     &:focus {
       color: var(--red);
+      text-decoration: none;
     }
   }
   &-logo {
@@ -133,11 +153,10 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: auto;
+    margin: 0 auto;
     padding: 2em;
     list-style: none;
     counter-reset: my-awesome-counter;
-    row-gap: 2em;
   }
 
   &-entry {
@@ -225,27 +244,34 @@ body {
   }
   &-entrySubtitle {
     align-self: start;
-    width: 570px;
     margin: 2em auto 0;
     font-size: 1.5rem;
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: -0.05em;
-    max-width: 100%;
+    max-width: 570px;
+    width: 100%;
   }
   &-entryCopy {
     line-height: 1.4;
     letter-spacing: normal;
     font-size: 1.3rem;
     max-width: 570px;
-    hyphens: auto;
-    margin: 1em 0;
+    margin: 1em auto;
   }
 
+  &-footnote {
+    max-width: 570px;
+    font-size: 0.8em;
+  }
   &-footer {
     display: flex;
     justify-content: center;
     margin-top: 2em;
     padding: 1em;
+    justify-content: center;
+    padding: 1em;
+    flex-grow: 1;
+    align-items: end;
   }
 }
