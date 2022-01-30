@@ -1,5 +1,6 @@
 :root {
   --bg-color: #e5ddd6;
+  --red: #ff5656;
 }
 
 body {
@@ -14,11 +15,117 @@ body {
           box-sizing: border-box;
 }
 
+.Mow-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Mow-hamburgerMenuIcon {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  width: 40px;
+  margin-left: 1em;
+  height: 40px;
+  cursor: pointer;
+  color: black;
+  -webkit-transition: color 0.25s, stroke 0.25s;
+  transition: color 0.25s, stroke 0.25s;
+}
+
+.Mow-hamburgerMenuIcon--white {
+  stroke: white;
+}
+
+.Mow-hamburgerMenuIcon:hover {
+  color: var(--red);
+  stroke: var(--red);
+}
+
+.Mow-hamburgerMenu {
+  position: fixed;
+  width: 80%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  max-width: 400px;
+  background: black;
+  padding-right: 3em;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+  opacity: 0;
+  color: white;
+}
+
+.Mow-hamburgerMenu.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.Mow-navList {
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: 3em;
+  list-style: none;
+}
+
+.Mow-navItem {
+  margin: 1em 0;
+}
+
+.Mow-navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.Mow-navLink:hover, .Mow-navLink:focus {
+  text-decoration: underline;
+  color: var(--red);
+}
+
+.Mow-navHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .Mow-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 1.5em 0 0;
+}
+
+.Mow-logoLink {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.Mow-logoLink:hover, .Mow-logoLink:focus {
+  color: var(--red);
 }
 
 .Mow-logo {
@@ -27,9 +134,17 @@ body {
   display: block;
   position: relative;
   text-align: right;
-  margin-left: 1em;
+  margin: 0.83em 0;
+  margin-left: 0.5em;
   line-height: 0.8;
   letter-spacing: -0.05em;
+  font-weight: bold;
+}
+
+.Mow-logo--white {
+  position: relative;
+  z-index: 99999;
+  padding-top: 0.75em;
 }
 
 @media (min-width: 960px) {
@@ -136,7 +251,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: #ff5656;
+  background: var(--red);
 }
 
 .Mow-entryPic::before {
