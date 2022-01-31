@@ -291,6 +291,7 @@ a:hover, a:focus {
   transition: -webkit-transform 0.25s;
   transition: transform 0.25s;
   transition: transform 0.25s, -webkit-transform 0.25s;
+  max-width: 100%;
 }
 
 .Mow-entryList {

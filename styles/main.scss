@@ -217,6 +217,7 @@ a {
     img {
       background: var(--red);
       transition: transform 0.25s;
+      max-width: 100%;
     }
   }
   &-entryList {
