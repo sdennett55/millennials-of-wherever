@@ -263,6 +263,11 @@ a:hover, a:focus {
   }
 }
 
+.Mow-date {
+  font-style: italic;
+  letter-spacing: 0.3em;
+}
+
 .Mow-entryHeading {
   display: inline-block;
   padding: 0 1em;
